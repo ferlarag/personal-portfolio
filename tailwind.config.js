@@ -9,7 +9,11 @@ export default {
       fontFamily: {
         Roboto: ['Roboto', 'sans-serif'],
         Tilt: ['"Tilt Warp"','sans-serif']
-      }
+      },
+      colors: {
+        main: '#0A1CE8',
+        mainHover: '#4F5CF9',
+      },
     },
   },
   plugins: [],
