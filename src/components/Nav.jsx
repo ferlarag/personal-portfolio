@@ -106,7 +106,7 @@ const Nav = () => {
             {viewporWidth > 640 && <Logo /> }
             <motion.div 
                 className="
-                    max-w-[1160px] w-full h-screen flex flex-col items-center justify-around flex-grow bg-white absolute top-14 z-[-1] left-[100vw] border-l
+                    max-w-[1160px] w-full h-screen flex flex-col items-center flex-grow bg-white absolute top-14 z-[-1] left-[100vw] border-l
                     sm:h-auto sm:bg-transparent sm:w-auto sm:relative sm:top-0 sm:pt-0 sm:border-l-0 sm:flex-grow-0
                 "
                 animate={{ x: !isOpen && viewporWidth < 639 ? 0 : -viewporWidth}}
@@ -114,8 +114,8 @@ const Nav = () => {
                 transition={{duration: viewporWidth > 640 ? 0 : 0.5}}
             >
                 <ul className="
-                    flex flex-col items-center gap-4
-                    sm:flex-row
+                    flex flex-col items-center gap-4 mt-20
+                    sm:flex-row sm:mt-0
                 ">
                     <li><Link onClick={scrollToHome}>home</Link></li>
                     <li><Link onClick={scrollToProjects}>projects</Link></li>
@@ -124,7 +124,7 @@ const Nav = () => {
                 </ul>
 
                 {viewporWidth < 640 && 
-                    <div className="flex flex-col items-center gap-4">
+                    <div className="flex flex-col items-center gap-4 mt-[200px]">
                         <p className="">You can also find me here 👇🏽</p>
                         <SocialLinks size="60" className="flex gap-5 border rounded-lg p-2"/>
                     </div>
