@@ -9,7 +9,12 @@ const Button = ({ label, type, onClick }) => {
     }
 
     return(
-        <button className={styles()} onClick={onClick}>{label}</button>
+        <button
+            className={styles()}
+            onClick={onClick}
+        >
+                {label}
+        </button>
     )
 }
 
