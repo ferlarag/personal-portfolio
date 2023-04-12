@@ -13,26 +13,26 @@ const Skills = () => {
             <Grid2x2>
                 <SkillCard 
                     title="Design"
-                    text="Let me show you how easy and straight forward working with me is. I’ll run your through the whole process from idea to live website"
+                    text="With a keen eye for aesthetics and user-centered design principles, I craft designs that are not only beautiful but also functional and intuitive."
                     button={false}
                     image={note}
                 />
-                <SkillCard 
+                <SkillCard
                     title="Development"
-                    text="Let me show you how easy and straight forward working with me is. I’ll run your through the whole process from idea to live website"
+                    text="I create flawless websites and web apps with clean code and intuitive interfaces to meet your needs and delight your users."
                     button={false}
                     image={coding}
                 />
                 <SkillCard 
-                    title="Tech Stack"
-                    text="Let me show you how easy and straight forward working with me is. I’ll run your through the whole process from idea to live website"
+                    title="My Tech Stack"
+                    text="For those who are curious, here is a list of the technologies and frameworks that I use and love."
                     button={true}
                     btnLabel="learn more"
                     image={mouse}
                 />
                 <SkillCard 
                     title="How it works?"
-                    text="Let me show you how easy and straight forward working with me is. I’ll run your through the whole process from idea to live website"
+                    text="Working with me is easy and straightforward. From ideation to launch, I guide you through the entire process to ensure that your vision becomes a reality. "
                     button={true}
                     btnLabel="see how"
                     image={clap}

@@ -13,7 +13,7 @@ const SkillCard = ({title, image, text, button, btnLabel}) => {
         ">
             <div className="flex flex-col flex-1 items-start gap-5">
                 <h2 className="font-Roboto font-bold text-4xl">{title}</h2>
-                <p className="font-Roboto">{text}</p>
+                <p className={button ? 'mb-auto' : null }>{text}</p>
                 {btn()}
             </div>
             <div className="flex-1 flex-shrink-0 self-center">
