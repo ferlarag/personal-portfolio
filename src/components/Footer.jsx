@@ -2,7 +2,7 @@ import keyboard from "../assets/keyboard.png"
 
 const Footer = () => {
     return(
-        <div className="mt-[140px] mb-10">
+        <div className="mt-[140px] mb-10 sm:mt-[220px]">
             <div className="flex justify-between items-center gap-10">
                 <div className="flex-1">
                     <img src={keyboard} alt="keyboard" />
