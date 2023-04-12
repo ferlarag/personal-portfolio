@@ -8,7 +8,7 @@ import note from "../assets/Note.png"
 
 const Skills = () => {
     return(
-        <>
+        <div id="services">
             <Header2 title="Skills and Services"/>
             <Grid2x2>
                 <SkillCard 
@@ -38,7 +38,7 @@ const Skills = () => {
                     image={clap}
                 />
             </Grid2x2>
-        </>
+        </div>
     )
 }
 

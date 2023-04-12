@@ -6,7 +6,7 @@ import image2 from "../assets/dummy-project-2.jpg"
 
 const Projects = () => {
     return(
-        <>
+        <div id="projects">
             <Header2 title="Projects"/>
             <Grid2x2>
                 <ProjectCard image={image1}/>
@@ -14,7 +14,7 @@ const Projects = () => {
                 <ProjectCard image={image2}/>
                 <ProjectCard image={image1}/>
             </Grid2x2>
-        </>
+        </div>
     )
 }
 
