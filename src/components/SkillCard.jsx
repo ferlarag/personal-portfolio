@@ -7,14 +7,17 @@ const SkillCard = ({title, image, text, button, btnLabel}) => {
     }
     
     return(
-        <div className="rounded-3xl border border-neutral-400 flex gap-11 p-7">
-            <div className="flex flex-col items-start gap-5">
+        <div className="
+            rounded-3xl border border-neutral-400 flex p-7 flex-col-reverse gap-10
+            sm:gap-0 sm:flex-row
+        ">
+            <div className="flex flex-col flex-1 items-start gap-5">
                 <h2 className="font-Roboto font-bold text-4xl">{title}</h2>
                 <p className="font-Roboto">{text}</p>
                 {btn()}
             </div>
-            <div className="ml-auto self-center">
-                <img src={image} alt="icon" />
+            <div className="flex-1 flex-shrink-0 self-center">
+                <img className="ml-auto" src={image} alt="icon" />
             </div>
         </div>
     )
