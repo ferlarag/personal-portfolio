@@ -1,5 +1,6 @@
 import Banner from "./components/Banner"
-import Form from "./components/Form"
+import Footer from "./components/Footer"
+import Forms from "./components/Forms"
 import MainGrid from "./components/MainGrid"
 import Nav from "./components/Nav"
 import Projects from "./components/Projects"
@@ -7,13 +8,14 @@ import Skills from "./components/Skills"
 
 function App() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-hidden">
       <Nav />
       <MainGrid>
         <Banner />
         <Projects />
         <Skills />
-        <Form />
+        <Forms />
+        <Footer />
       </MainGrid>
     </div>
   )
