@@ -1,10 +1,20 @@
+import { scroller } from "react-scroll"
+
 import pringles from "../assets/Pringles.png"
 import metaball from "../assets/Metaball.png"
 import tube from "../assets/Tube.png"
-import line from "../assets/pointing-line-1.png"
 import Button from "./Button"
 
 const Banner = () => {
+
+    const handleScroll = () => {
+        scroller.scrollTo('contact', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        })
+    }
+
     return(
         <div className="
             mt-[100px] relative
@@ -29,15 +39,8 @@ const Banner = () => {
                 <Button 
                     label="contact"
                     type="main"
+                    onClick={handleScroll}
                 />
-            </div>
-            <div className="`
-                hidden absolute right-10 z-[-1]
-                sm:block sm:top-[-140px]
-                md:top-[-180px]
-            ">
-                <img src={line} alt="pointing line" />
-                <h3 className="text-2xl font-Tilt absolute left-[-50px] top-20">Say hi! 👋🏽</h3>
             </div>
             <img 
                 // className="
