@@ -42,11 +42,7 @@ const Banner = () => {
                     onClick={handleScroll}
                 />
             </div>
-            <img 
-                // className="
-                //     absolute top-[-200px] left-[-150px] z-[-1]
-                //     sm:top-[-275px] sm:left-[-350px]
-                // " 
+            <img
                 className="
                     absolute hidden top-[-275px] left-[-350px] z-[-2]
                     md:block
@@ -54,11 +50,7 @@ const Banner = () => {
                 src={tube} 
                 alt="Tube" 
             />
-            <img 
-                // className="
-                //     absolute top-[-210px] left-[150px] z-[-1]
-                //     sm:top-[-625px] sm:left-[175px]
-                // " 
+            <img
                 className="
                     absolute hidden top-[-625px] left-[175px] z-[-2]
                     md:block
