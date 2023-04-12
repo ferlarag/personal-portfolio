@@ -39,7 +39,7 @@ const Forms = () => {
     }
 
     return(
-        <div>
+        <div id="contact">
             <Header2 title="How can I help you?"/>
             <div className="
                 flex mt-8 gap-6 justify-center flex-col
@@ -55,7 +55,7 @@ const Forms = () => {
                                     First Name <span className="text-red-500">*</span>
                                 </Form.Label>
                                 <Form.Message className="text-red-500 font-Roboto" match="valueMissing">
-                                    Can't be empty
+                                    Required
                                 </Form.Message>
                             </div>
                             <Form.Control asChild>
@@ -77,7 +77,7 @@ const Forms = () => {
                                     Last Name <span className="text-red-500">*</span>
                                 </Form.Label>
                                 <Form.Message className="text-red-500 font-Roboto" match="valueMissing">
-                                    Can't be empty
+                                    Required
                                 </Form.Message>
                             </div>
                             <Form.Control asChild>
@@ -100,7 +100,7 @@ const Forms = () => {
                                 Email <span className="text-red-500">*</span>
                             </Form.Label>
                             <Form.Message className="text-red-500 font-Roboto" match="valueMissing">
-                                Can't be empty
+                                Required
                             </Form.Message>
                             <Form.Message className="text-red-500 font-Roboto" match="typeMismatch">
                                 Invalid email
@@ -192,7 +192,7 @@ const Forms = () => {
                                 Message <span className="text-red-500">*</span>
                             </Form.Label>
                             <Form.Message className="text-red-500 font-Roboto" match="valueMissing">
-                                Can't be empty
+                                Required
                             </Form.Message>
                         </div>
                         <Form.Control asChild>
