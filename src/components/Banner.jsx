@@ -16,10 +16,13 @@ const Banner = () => {
     }
 
     return(
-        <div className="
-            mt-[100px] relative
-            md:mt-[270px]
-        ">
+        <div 
+            id="home"
+            className="
+                mt-[100px] relative
+                md:mt-[270px]
+            "
+        >
             <h3 className="
                 text-xl font-Tilt
                 sm:text-2xl

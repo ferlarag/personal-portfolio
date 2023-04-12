@@ -1,7 +1,8 @@
 import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import { scroller } from 'react-scroll';
+import { scroller, animateScroll } from 'react-scroll';
+import { Routes, Route, Link } from "react-router-dom";
 
 import Button from "./Button"
 import Logo from "./Logo"
@@ -47,6 +48,34 @@ const Nav = () => {
     const handleClick = () => {
         setIsOpen(!isOpen)
     }
+  
+    
+    const scrollToHome = () => {
+        handleClick()
+        animateScroll.scrollToTop({
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        })
+    }
+
+    const scrollToProjects = () => {
+        handleClick()
+        scroller.scrollTo('projects', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        })
+    }
+
+    const scrollToServices = () => {
+        handleClick()
+        scroller.scrollTo('services', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        })
+    }
 
     const scrollToContact = () => {
         handleClick()
@@ -55,7 +84,7 @@ const Nav = () => {
             delay: 0,
             smooth: 'easeInOutQuart'
         })
-    }      
+    }
 
     return(
         <nav 
@@ -64,7 +93,7 @@ const Nav = () => {
                 sm:py-2 sm:h-auto sm:flex-row sm:px-6 sm:justify-between
             "
         >
-            {viewporWidth > 640 && <SocialLinks className="flex flex-row gap-8 items-center"/> }
+            {viewporWidth > 640 && <SocialLinks size="30" className="flex flex-row gap-8 items-center"/> }
             <div className="
                 bg-white w-full flex justify-between items-center
                 sm:hidden sm:bg-transparent
@@ -77,7 +106,7 @@ const Nav = () => {
             {viewporWidth > 640 && <Logo /> }
             <motion.div 
                 className="
-                    max-w-[1160px] w-full h-screen flex-grow bg-white pt-10 absolute top-14 z-[-1] left-[100vw] border-l
+                    max-w-[1160px] w-full h-screen flex flex-col items-center justify-around flex-grow bg-white absolute top-14 z-[-1] left-[100vw] border-l
                     sm:h-auto sm:bg-transparent sm:w-auto sm:relative sm:top-0 sm:pt-0 sm:border-l-0 sm:flex-grow-0
                 "
                 animate={{ x: !isOpen && viewporWidth < 639 ? 0 : -viewporWidth}}
@@ -88,13 +117,18 @@ const Nav = () => {
                     flex flex-col items-center gap-4
                     sm:flex-row
                 ">
-                    <li>home</li>
-                    <li>project</li>
-                    <li>services</li>
+                    <li><Link onClick={scrollToHome}>home</Link></li>
+                    <li><Link onClick={scrollToProjects}>projects</Link></li>
+                    <li><Link onClick={scrollToServices}>services</Link></li>
                     <li><Button label="contact" type="main" onClick={scrollToContact}/></li>
-
-                    {viewporWidth < 640 && <li><SocialLinks className="flex gap-2 border rounded-lg p-4"/></li>}
                 </ul>
+
+                {viewporWidth < 640 && 
+                    <div className="flex flex-col items-center gap-4">
+                        <p className="">You can also find me here 👇🏽</p>
+                        <SocialLinks size="60" className="flex gap-5 border rounded-lg p-2"/>
+                    </div>
+                }
 
                 
             </motion.div>
